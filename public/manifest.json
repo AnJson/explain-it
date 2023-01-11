@@ -1,0 +1,35 @@
+{
+  "short_name": "Explain it",
+  "name": "Explain it...",
+  "version": "0.1.0",
+  "description": "Using gpt3 to explain selected text in a simple way.",
+  "manifest_version": 2,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj1omE5NVUlteccIdELk+//mZXDMOgkW+WnK/mWvefREXyEaXQisnpem7hBkRzmWLXD1rKCC1y5ce3LH9An18RND7/u5vXzlO0qNyGMkjkYDFqSdde88/oW2N7QvYjDgFXiTjfmytZbMsjQOapzRqeuGnzzi//MPBBltHAt9uCJVw0YMkZqpnAXkrR9m7WONqNNokR/rLSt+/KwMqYtF9u5Hza4nW3JrS0o6y6NoQIKcstBROVaBWMaA1uNvptzTMieF8Q0JlwI5ZVBrDB5JAUtzofn7q3W1eB8oWLvJVJHky4RVaP6scw1QZDlVRLcomXQNgmj7wjk0jqr80MwBjJwIDAQAB",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open Explain it..."
+  },
+  "permissions": ["storage", "identity"],
+  "optional_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "expl-icon-16.png",
+    "32": "expl-icon-32.png",
+    "48": "expl-icon-48.png",
+    "64": "expl-icon-64.png",
+    "128": "expl-icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./static/js/content.js"],
+      "all_frames": false,
+      "run_at": "document_end"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
