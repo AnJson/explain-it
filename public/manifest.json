@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Using gpt3 to explain selected text in a simple way.",
   "manifest_version": 2,
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj1omE5NVUlteccIdELk+//mZXDMOgkW+WnK/mWvefREXyEaXQisnpem7hBkRzmWLXD1rKCC1y5ce3LH9An18RND7/u5vXzlO0qNyGMkjkYDFqSdde88/oW2N7QvYjDgFXiTjfmytZbMsjQOapzRqeuGnzzi//MPBBltHAt9uCJVw0YMkZqpnAXkrR9m7WONqNNokR/rLSt+/KwMqYtF9u5Hza4nW3JrS0o6y6NoQIKcstBROVaBWMaA1uNvptzTMieF8Q0JlwI5ZVBrDB5JAUtzofn7q3W1eB8oWLvJVJHky4RVaP6scw1QZDlVRLcomXQNgmj7wjk0jqr80MwBjJwIDAQAB",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy7r9j9Fmmax/TjczCjZVpRnNPynNL1r655SOi2/KqyhANY5Rf4JI6Wf5Bpu7wqQaL16Lj3hkeLob1szlcmajic5GHp0LQtwjtYwBTF4rDN8ERJGu66+bVeuVyOVPSAnlPO1cu97Ur2sm31P+mqp1pA0okHu3meSWu7DiAZqwFcqbQMAdnY4HdLjaRekkuyy+WzxSsCGYdy6lb16yuEf5kau4BKHs5UBfwIxPlK7jmQFUek0PsTdVCrrrRvP0WoI2CvYMJzFfr9N/fEtWq2toAn4e87JZ94YinuNpWhCqMefLH2qiqTARn4qtkA4cELezcn10vFsO/LhlCo8DlxBRFwIDAQAB",
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "Open Explain it..."
