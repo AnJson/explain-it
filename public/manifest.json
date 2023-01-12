@@ -1,5 +1,4 @@
 {
-  "short_name": "Explain it",
   "name": "Explain it...",
   "version": "0.1.0",
   "description": "Using gpt3 to explain selected text in a simple way.",

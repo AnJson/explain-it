@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
 const App = () => {
+  useEffect(() => {
+    chrome.runtime.onMessage.addListener((obj, sender, sendResponse) => {
+      console.log('---------Listening req.text--------')
+      console.log(obj.text)
+      console.log('------------------------------')
+
+      sendResponse('Got it!')
+    })
+    console.log('UseEffect here')
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
