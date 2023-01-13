@@ -12,6 +12,9 @@
   "optional_permissions": [
     "<all_urls>"
   ],
+  "host_permissions": [
+    "<all_urls>"
+   ],
   "icons": {
     "16": "expl-icon-16.png",
     "32": "expl-icon-32.png",
