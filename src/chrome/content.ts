@@ -1,5 +1,5 @@
-// Listen for selectionchange event
-document.addEventListener('selectionchange', () => {
+console.log('Im injected / Contents.js')
+function sendSelectionChanged() {
   // Get the selected text
   const selectedText = window.getSelection()?.toString()
   console.log('Selected text----------------')
@@ -11,4 +11,9 @@ document.addEventListener('selectionchange', () => {
     type: 'selectionchange',
     text: selectedText
   })
-})
+}
+
+// Clean listeners.
+document.removeEventListener('selectionchange', sendSelectionChanged)
+// Listen for selectionchange event.
+document.addEventListener('selectionchange', sendSelectionChanged)
