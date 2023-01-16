@@ -1,31 +1,20 @@
-/* chrome.tabs.onActivated.addListener((activeInfo) => {
-  chrome.tabs.executeScript(activeInfo.tabId, { file: 'content.js' })
-}) */
+import { injectContentScript } from '../utils/injectContentScript'
 
-/* chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
-  if (changeInfo.status === 'complete') {
-    chrome.tabs.executeScript(tabId, {
-      file: 'content.js'
-    })
-  }
-}) */
-
-function injectContentScript(status: string | undefined, tabId: number) {
-  if (status === 'complete') {
-    chrome.scripting.executeScript({
-      target: {
-        tabId,
-        allFrames: true
-      },
-      files: ['./static/js/content.js']
-    })
-  } else {
-    setTimeout(() => {
-      injectContentScript(status, tabId)
-    }, 200)
-  }
-}
-
+// ---------------------------------------------
+// Inject scripts on tabs update.
+// ---------------------------------------------
 chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+  console.log('------- Change info --------')
+  console.log(changeInfo)
+  console.log('------- ----------- --------')
   injectContentScript(changeInfo.status, tabId)
+})
+
+// ---------------------------------------------
+// Selection changed.
+// ---------------------------------------------
+chrome.runtime.onMessage.addListener((message) => {
+  if (message.data === 'selectionchange') {
+    // Selection changed.
+  }
 })
