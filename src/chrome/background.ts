@@ -15,6 +15,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 // ---------------------------------------------
 chrome.runtime.onMessage.addListener((message) => {
   if (message.data === 'selectionchange') {
-    // Selection changed.
+    // TODO: Set or delete currently selected text in storage for extension to use.
+    // Use debounce in a suiting class.
   }
 })
